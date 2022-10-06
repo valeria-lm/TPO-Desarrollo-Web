@@ -4,8 +4,8 @@
 
 :root {
   --white-color: #ffffff;
-  --light-brown-color: #af7c53;
-  --light-brown-color-hover: #895330;
+  --light-brown-color: #895330;
+  --light-brown-color-hover: #af7c53;
   --brown-color: #371809;
   --dark-brown-color: #1d0202;
   --yellow-color: #ffdf2d;
@@ -36,11 +36,28 @@ nav img {
   margin-left: 1rem;
 }
 
-nav a {
+nav div a {
+  position: relative;
   margin-left: 3rem;
   color: var(--white-color);
   text-decoration: none;
   font-weight: 500;
+}
+
+nav div a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: var(--white-color);
+  left: 50%;
+  bottom: -5px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav div a:hover::after {
+  width: 100%;
+  left: 0;
 }
 
 /*-------------- MAIN: portada --------------*/
@@ -55,7 +72,7 @@ nav a {
   background-position: 50% 50%;
 }
 
-.main__frase-portada {
+.main__frase--portada {
   position: absolute;
   top: 8rem;
   left: 3rem;
@@ -80,17 +97,18 @@ nav a {
 }
 
 .main__productos--titulo h3 {
-  font-size: 1.8rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 900;
   color: var(--brown-color);
 }
 
 .main__productos--titulo button {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
   background-color: var(--light-brown-color);
   border: none;
   border-radius: 0.7rem;
   color: var(--white-color);
+  font-size: 0.9rem;
 }
 
 .main__productos--titulo button:hover {
@@ -119,7 +137,7 @@ nav a {
   height: 15rem;
   margin-bottom: 0.5rem;
   object-fit: cover;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   box-shadow: 8px 8px 12px rgba(0,0,0,0.3);
 }
 
@@ -136,7 +154,7 @@ nav a {
 }
 
 .main__productos--productos div p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: justify
 }
 
@@ -157,21 +175,21 @@ nav a {
   display: block;
   width: 20rem;
   height: 25rem;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   box-shadow: 8px 10px 15px rgba(0,0,0,0.2);
   object-fit: cover;
 }
 
 .main__nuestro-cafe--container {
   box-shadow: 3px 3px 30px #bebebe,-3px -3px 30px var(--white-color);
-  border-radius: 1.5rem;
+  border-radius: 1rem;
 }
 
 .main__nuestro-cafe--titulo {
   padding: 1rem 1.5rem;
   font-size: 1.5rem;
   font-weight: 900;
-  border-radius: 1.5rem 1.5rem 0 0;
+  border-radius: 1rem 1rem 0 0;
   color: var(--white-color);
   background-color: var(--dark-brown-color);
 }
@@ -295,7 +313,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--light-brown-color-hover);
+  background-color: var(--light-brown-color);
 }
 
 .container__info--icon a i {
