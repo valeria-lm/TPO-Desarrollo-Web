@@ -6,4 +6,4 @@ const date = new Date();
 const year = date.getFullYear();
 
 // insert year to html
-copyright.innerHTML = `&copy copyright Tienda cafe ${year}`;
+copyright.innerHTML = `© ${year}. Copyright Tienda AVA Café. Todos los derechos reservados`;
