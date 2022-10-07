@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@800&display=swap');
 
 
 :root {
@@ -63,24 +62,43 @@ nav div a:hover::after {
 
 /*-------------- MAIN: portada --------------*/
 .main__portada {
-  width: 100%;
-  height: 100vh;
   display: flex;
-  justify-content: center;
-  background: linear-gradient(90deg, rgba(55,24,9),rgba(0,0,0,0)), url(images/portada-cafe.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
+  justify-content: space-between;
+  width: 100%;
+  height: 80vh;
+  padding: 5rem 2rem 0;
+  background-color: var(--brown-color);
 }
 
-.main__frase--portada {
-  position: absolute;
-  top: 8rem;
-  left: 3rem;
+.main__portada > img {
+  object-fit: cover;
+  border-radius: 100%;
+  box-shadow: 8px 8px 12px rgba(0,0,0,0.3);
+}
+
+.main__portada--frase {
   width: 30rem;
+  padding-top: 3rem;
   color: var(--white-color);
   font-size: 2.8rem;
-  font-family: 'Fira Sans', sans-serif;
+}
+
+.main__portada--image1 {
+  position: relative;
+  width: 10rem;
+  height: 10rem;
+  left: 10rem;
+  top: 4rem;
+  box-shadow: 8px 8px 12px rgba(0,0,0,0.3);
+}
+
+.main__portada--image2 {
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  left: 3rem;
+  top: 20rem;
+  box-shadow: 8px 8px 12px rgba(0,0,0,0.3);
 }
 
 /*-------------- MAIN: productos destacados --------------*/
