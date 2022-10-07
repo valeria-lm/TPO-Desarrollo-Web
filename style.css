@@ -82,7 +82,7 @@ nav div a:hover::after {
 }
 
 .main__portada--frase {
-  padding-top: 2rem;
+  padding-top: 4rem;
   color: var(--white-color);
   font-size: 2.8rem;
 }
