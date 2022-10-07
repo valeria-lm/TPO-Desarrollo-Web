@@ -82,8 +82,7 @@ nav div a:hover::after {
 }
 
 .main__portada--frase {
-  width: 30rem;
-  padding-top: 3rem;
+  padding-top: 2rem;
   color: var(--white-color);
   font-size: 2.8rem;
 }
@@ -92,7 +91,7 @@ nav div a:hover::after {
   position: relative;
   width: 10rem;
   height: 10rem;
-  left: 10rem;
+  left: 5rem;
   top: 4rem;
   box-shadow: 8px 8px 12px rgba(0,0,0,0.3);
 }
@@ -101,7 +100,6 @@ nav div a:hover::after {
   position: relative;
   width: 6rem;
   height: 6rem;
-  left: 3rem;
   top: 20rem;
   box-shadow: 8px 8px 12px rgba(0,0,0,0.3);
 }
@@ -111,7 +109,7 @@ nav div a:hover::after {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding: 3rem;
+  padding: 3rem 3rem 7rem;
 }
 
 .main__productos--titulo {

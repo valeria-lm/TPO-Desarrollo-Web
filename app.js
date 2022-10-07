@@ -9,6 +9,7 @@ const year = date.getFullYear();
 copyright.innerHTML = `© ${year}. Copyright Tienda AVA Café. Todos los derechos reservados`;
 
 /* ---------------- */
+// change nav color, scroll
 window.addEventListener("scroll", function(){
   let nav = document.querySelector("nav");
   nav.classList.toggle("abajo", window.scrollY>0);
