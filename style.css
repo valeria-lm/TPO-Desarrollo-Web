@@ -75,16 +75,20 @@ nav div a:hover::after {
   background-color: var(--brown-color);
 }
 
-.main__portada > img {
+.main__portada--frase {
+  padding-top: 4rem;
+  color: var(--white-color);
+  font-size: 2.8rem;
+}
+
+.main__portada img {
   object-fit: cover;
   border-radius: 100%;
   box-shadow: 8px 8px 12px rgba(0,0,0,0.3);
 }
 
-.main__portada--frase {
-  padding-top: 4rem;
-  color: var(--white-color);
-  font-size: 2.8rem;
+.main__portada img:nth-of-type(3) {
+  animation: floating 5s ease-in-out 0.5s infinite;
 }
 
 .main__portada--image1 {
@@ -93,7 +97,7 @@ nav div a:hover::after {
   height: 10rem;
   left: 5rem;
   top: 4rem;
-  box-shadow: 8px 8px 12px rgba(0,0,0,0.3);
+  animation: floating 3s ease-in-out 0.5s infinite;
 }
 
 .main__portada--image2 {
@@ -101,7 +105,13 @@ nav div a:hover::after {
   width: 6rem;
   height: 6rem;
   top: 20rem;
-  box-shadow: 8px 8px 12px rgba(0,0,0,0.3);
+  animation: floating 7s ease-in-out 0.5s infinite;
+}
+
+@keyframes floating {
+  from { transform: translate(0,  0px); }
+  65%  { transform: translate(0, 15px); }
+  to   { transform: translate(0, -0px); }    
 }
 
 /*-------------- MAIN: productos destacados --------------*/
@@ -109,7 +119,7 @@ nav div a:hover::after {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding: 3rem 3rem 7rem;
+  padding: 5rem 3rem;
 }
 
 .main__productos--titulo {
@@ -187,7 +197,7 @@ nav div a:hover::after {
 /*-------------- MAIN: nuestro café --------------*/
 .main__nuestro-cafe {
   height: 25rem; 
-  margin: 3rem;
+  margin: 4rem 3rem;
   display: flex;
   gap: 2rem;
   border-radius: 1.5rem;
@@ -298,32 +308,31 @@ footer {
   flex-direction: column;
 }
 
-.footer__container--info > a,
 .container__info--titulo {
   margin-bottom: 1rem;
-  text-decoration: none;
   color: var(--white-color);
   font-weight: 500;
   font-size: 0.9rem;
-}
-
-.footer__container--info div div {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
 .container__info--items {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.container__info--items a,
+.container__info--items a span {
+  display: flex;
+  gap: 0.5rem;
+  text-decoration: none;
   font-size: 0.8rem;
   font-weight: 400;
   color: var(--footer-color);
 }
 
-.container__info--items div span {
-  font-size: 1rem;
+.container__info--items a:hover {
+  color: var(--white-color);
 }
 
 .container__info--icon {
