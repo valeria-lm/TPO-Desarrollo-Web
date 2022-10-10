@@ -1,117 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../style.css" />
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,1,0"
-  />
-  <script
-    src="https://kit.fontawesome.com/d8433bcd8c.js"
-    crossorigin="anonymous"
-  ></script>
-  <title>AVA Café</title>
-  <link rel="icon" href="../images/Ava-logo3.ico">
-</head>
-<body>
-  <nav>
-    <img src="../images/Ava-logo2.png" alt="logo-cafe">
-    <div>
-      <a href="../index.html">Home</a>
-      <a href="nosotros.html">Nosotros</a>
-      <a href="menu.html">Menú</a>
-      <a href="contacto.html">Contacto</a>
-    </div>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,1,0"
+    />
+    <script
+      src="https://kit.fontawesome.com/d8433bcd8c.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>AVA Café</title>
+    <link rel="icon" href="../images/Ava-logo3.ico" />
+  </head>
+  <body>
+    <nav>
+      <img src="../images/Ava-logo2.png" alt="logo-cafe" />
+      <div>
+        <a href="../index.html">Home</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="menu.html">Menú</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </nav>
 
-  <form>
-    <h2>Escribinos</h2>
-    <div class="form__info">
-      <label for="nombre">Nombre y Apellido</label>
-      <input class="form__info--input" type="text" id="name" name="name" placeholder="Ingrese su nombre completo">
-    </div>
+    <main>
+      <section class="body-cont">
+        <div class="caja-contacto">
+          <form>
+            <fieldset>
+              <legend><b> Escribinos </b></legend>
+              <label for="nombreapellido">Nombre y Apellido </label>
+              <input
+                type="text"
+                id="nombreapellido"
+                class="imput-padron"
+                required
+              />
 
-    <div class="form__info">
-      <label for="email">Email</label>
-      <input class="form__info--input" type="email" id="email" name="email" placeholder="Ingrese su mail">
-    </div>
+              <label for="correoelectronico">Correo electronico</label>
+              <input
+                type="email"
+                id="correoelectronico"
+                class="imput-padron"
+                required
+                placeholder="email@.dominio.com"
+              />
 
-    <div class="form__info">
-      <label for="telefono">Telefono</label>
-      <input class="form__info--input" type="number" id="telefono" name="telefono" placeholder="Ingrese su telefono">
-    </div>
-    
-    <div class="form__info">
-      <label for="comentarios">Dejanos tu comentario</label>
-      <input class="form__info--input" type="text" id="comentario" name="comentario" placeholder="mensaje"> 
-    </div>
-    
-    <div>
-      <input type="checkbox">Le gustaría recibir nuestras novedades, promos y descuentos
-    </div>
-    <button>Enviar</button>
-  </form>
+              <label for="telefono">Telefono </label>
+              <input
+                type="tel"
+                id="telefono"
+                class="imput-padron"
+                required
+                placeholder="(XX)(XXXX XXXX)"
+              />
 
-  <footer>
-    <div class="footer__container">
-      <img src="../images/Ava-logo3.jpeg" alt="logo-cafe" />
-      <div class="footer__container--info">
-        <p class="container__info--titulo">Menú</p>
-        <div class="container__info--items">
-          <a href="/html/menu.html"> <p>Cafés</p></a>
-          <a href="/html/menu.html"><p>Pastelería</p></a>
-          <a href="/html/menu.html"><p>Bebidas</p></a>
+              <label for="mensaje">Mensaje</label>
+              <textarea cols="70" rows="10" id="mensaje"></textarea>
+
+              <div>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Le gustaria recibir nuestras
+                  novedades, promos y descuentos</p>
+                </label>
+                <input type="submit" value="Enviar" class="enviar" />
+              </div>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="caja-image">
+          <img src="../images/taza-cafe-destacada.jpg" />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer__container">
+        <img src="../images/Ava-logo3.jpeg" alt="logo-cafe" />
+        <div class="footer__container--info">
+          <p class="container__info--titulo">Menú</p>
+          <div class="container__info--items">
+            <a href="/html/menu.html"> <p>Cafés</p></a>
+            <a href="/html/menu.html"><p>Pastelería</p></a>
+            <a href="/html/menu.html"><p>Bebidas</p></a>
+          </div>
+        </div>
+
+        <div class="footer__container--info">
+          <p class="container__info--titulo">Contacto</p>
+          <div class="container__info--items">
+            <a href="#">
+              <span class="material-symbols-outlined">call</span>
+              <p>(011)36471956</p>
+            </a>
+
+            <a href="#">
+              <span class="material-symbols-outlined">mail</span>
+              <p>ava.cafeteria@gmail.com</p>
+            </a>
+
+            <a href="#">
+              <span class="material-symbols-outlined"> location_on </span>
+              <p>Rojas 1301. CABA</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__container--info">
+          <p class="container__info--titulo">Seguinos en</p>
+          <div class="container__info--icon">
+            <a href="https://www.instagram.com/"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+
+            <a href="https://es-la.facebook.com/"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+
+            <a href="https://twitter.com/?lang=es"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+          </div>
         </div>
       </div>
 
-      <div class="footer__container--info">
-        <p class="container__info--titulo">Contacto</p>
-        <div class="container__info--items">
-          <a href="#">
-            <span class="material-symbols-outlined">call</span>
-            <p>(011)36471956</p>
-          </a>
-
-          <a href="#">
-            <span class="material-symbols-outlined">mail</span>
-            <p>ava.cafeteria@gmail.com</p>
-          </a>
-
-          <a href="#">
-            <span class="material-symbols-outlined"> location_on </span>
-            <p>Av. Corrientes 1120</p>
-          </a>
-        </div>
-      </div>
-
-      <div class="footer__container--info">
-        <p class="container__info--titulo">Seguinos en</p>
-        <div class="container__info--icon">
-          <a href="https://www.instagram.com/"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-
-          <a href="https://es-la.facebook.com/"
-            ><i class="fa-brands fa-facebook-f"></i
-          ></a>
-
-          <a href="https://twitter.com/?lang=es"
-            ><i class="fa-brands fa-twitter"></i
-          ></a>
-        </div>
-      </div>
-    </div>
-
-    <hr />
-    <p>
-      Accesibilidad web | Aviso de privacidad | Condiciones de uso | Mapa del
-      sitio
-    </p>
-    <h5 id="copyright"></h5>
-  </footer>
-  <script src="../app.js"></script>
-</body>
+      <hr />
+      <p>
+        Accesibilidad web | Aviso de privacidad | Condiciones de uso | Mapa del
+        sitio
+      </p>
+      <h5 id="copyright"></h5>
+    </footer>
+    <script src="../app.js"></script>
+  </body>
 </html>
