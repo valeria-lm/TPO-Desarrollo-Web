@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap");
 
 :root {
   --white-color: #ffffff;
@@ -11,11 +10,11 @@
   --footer-color: #c5b2a6;
 }
 
-*{
+* {
   margin: 0;
   box-sizing: border-box;
   /*1rem= 10px*/
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /*-------------- NAV --------------*/
@@ -29,7 +28,7 @@ nav {
   height: 3.5rem;
   padding: 0 3rem 0 0;
   background-color: var(--brown-color);
-  }
+}
 
 nav.abajo {
   background-color: var(--dark-brown-color);
@@ -84,7 +83,7 @@ nav div a:hover::after {
 .main__portada img {
   object-fit: cover;
   border-radius: 100%;
-  box-shadow: 8px 8px 12px rgba(0,0,0,0.3);
+  box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.3);
 }
 
 .main__portada img:nth-of-type(3) {
@@ -109,9 +108,15 @@ nav div a:hover::after {
 }
 
 @keyframes floating {
-  from { transform: translate(0,  0px); }
-  65%  { transform: translate(0, 15px); }
-  to   { transform: translate(0, -0px); }    
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 15px);
+  }
+  to {
+    transform: translate(0, -0px);
+  }
 }
 
 /*-------------- MAIN: productos destacados --------------*/
@@ -144,17 +149,16 @@ nav div a:hover::after {
 }
 
 .main__productos--titulo button:hover {
-  background-color:var(--light-brown-color-hover);
+  background-color: var(--light-brown-color-hover);
   cursor: pointer;
 }
 
 .main__productos--productos {
-  display: grid; 
-  grid-template-columns: 1fr 1fr 1fr 1fr; 
-  grid-template-rows: 1fr; 
-  gap: 6rem; 
-  grid-template-areas: 
-    "producto-destacado1 producto-destacado2 producto-destacado3 producto-destacado4"; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 6rem;
+  grid-template-areas: "producto-destacado1 producto-destacado2 producto-destacado3 producto-destacado4";
   margin-bottom: 1rem;
 }
 
@@ -170,7 +174,7 @@ nav div a:hover::after {
   margin-bottom: 0.5rem;
   object-fit: cover;
   border-radius: 1rem;
-  box-shadow: 8px 8px 12px rgba(0,0,0,0.3);
+  box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.3);
 }
 
 .main__productos--productos div div {
@@ -187,7 +191,7 @@ nav div a:hover::after {
 
 .main__productos--productos div p {
   font-size: 1rem;
-  text-align: justify
+  text-align: justify;
 }
 
 .star {
@@ -196,7 +200,7 @@ nav div a:hover::after {
 
 /*-------------- MAIN: nuestro café --------------*/
 .main__nuestro-cafe {
-  height: 25rem; 
+  height: 25rem;
   margin: 4rem 3rem;
   display: flex;
   gap: 2rem;
@@ -208,12 +212,12 @@ nav div a:hover::after {
   width: 20rem;
   height: 25rem;
   border-radius: 1rem;
-  box-shadow: 8px 10px 15px rgba(0,0,0,0.2);
+  box-shadow: 8px 10px 15px rgba(0, 0, 0, 0.2);
   object-fit: cover;
 }
 
 .main__nuestro-cafe--container {
-  box-shadow: 3px 3px 30px #bebebe,-3px -3px 30px var(--white-color);
+  box-shadow: 3px 3px 30px #bebebe, -3px -3px 30px var(--white-color);
   border-radius: 1rem;
 }
 
@@ -242,7 +246,7 @@ nav div a:hover::after {
   width: 8rem;
   height: 8rem;
   border-radius: 100%;
-  box-shadow: 8px 8px 10px -3px rgba(0,0,0,0.5);
+  box-shadow: 8px 8px 10px -3px rgba(0, 0, 0, 0.5);
 }
 
 .main__nuestro-cafe--granos div div {
@@ -268,7 +272,7 @@ nav div a:hover::after {
   display: flex;
   width: 100%;
   height: 70vh;
-  padding: 5rem 3rem ;
+  padding: 5rem 3rem;
   margin-right: 2rem;
 }
 
@@ -287,14 +291,14 @@ nav div a:hover::after {
 .Nosotros_nosotros_1 div {
   display: flex;
   align-items: center;
-   width: 35rem;
+  width: 35rem;
   height: auto;
   margin: 3rem 3rem;
   padding: 1rem 1rem;
   background-color: var(--light-brown-color-hover);
   object-fit: cover;
   border-radius: 1rem;
-  box-shadow: 20px 20px 25px var(--brown-color) ;
+  box-shadow: 20px 20px 25px var(--brown-color);
 }
 
 .Nosotros_nosotros_1 img {
@@ -314,81 +318,106 @@ nav div a:hover::after {
 .Nosotros_nosotros_1 p {
   color: #ffffff;
   text-align: center;
-  font-family: 'Noto Serif Gujarati', serif;
+  font-family: "Noto Serif Gujarati", serif;
 }
-
-
 
 /* -------------- FORMULARIO: contacto.html --------------*/
-.body-cont {
+.section__contacto-portada {
+  height: 30rem;
+  position: relative;
+}
+
+.section__contacto-portada::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#371809e5, #37180959);
+}
+
+.section__contacto-portada img {
+  object-fit: cover;
+  object-position: 80% 20%;
+  width: 100%;
+  height: 100%;
+}
+
+.section__contacto-portada::after {
+  content: "ESTEMOS EN CONTACTO";
   display: flex;
-  justify-content: space-between;
-}
-
-form {
-  margin: 6rem;
-  width: auto;
-}
-
-legend {
+  justify-content: center;
   align-items: center;
-  font-size: 10px;
-  color:black
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--white-color);
+  font-size: 2.2rem;
+  font-weight: 700;
 }
 
-form label, form legend {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.imput-padron {
-  display: block;
-  margin:0 0 20px;
-  padding: 10px 15px;
-  width: 500px;
-}
-
-.checkbox {
+.section__contacto-form {
   display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.section__contacto-form fieldset {
+  width: 20rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.fieldset__container {
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
-  margin: 2rem 0;
+}
+
+.fieldset__container--inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+form legend {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--dark-brown-color);
+}
+
+form label {
   font-size: 1.1rem;
 }
 
-.enviar {
-  width:40% ;
-  padding: 15px 0;
-  font-size: 18px;
+.input-padron {
+  height: 2rem;
+}
+
+.fieldset__container button {
+  padding: 1rem 3rem;
+  font-size: 1rem;
   font-weight: bold;
-  color: white;
-  background:  rgb(235, 117, 59) ;
+  color: var(--white-color);
+  background-color: var(--light-brown-color);
   border: none;
-  border-radius: 5px;
-  transition: 1s all;
-  cursor:pointer
+  border-radius: 0.3rem;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
 }
 
-.enviar:hover {
-  background:rgba(55,24,9);
-  transform: scale(1.2);
+.fieldset__container button:hover {
+  background-color: var(--light-brown-color-hover);
+  transform: translateY(-6px);
 }
-
-.caja-image {
-  width: 40rem;
-}
-
-.caja-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 
 /* -------------- FOOTER --------------*/
 footer {
   display: flex;
   flex-direction: column;
-  /* margin-top: 10rem; */  
+  /* margin-top: 10rem; */
   font-size: 0.7rem;
   color: var(--white-color);
   background-color: var(--dark-brown-color);
@@ -478,39 +507,4 @@ footer > p {
   margin: 1rem 0;
   font-size: 0.7rem;
   font-weight: 400;
-}
-/*-----mq----*/
-
-
-@media screen and (max-width:480px){
-  *{
-    width: -webkit-fill-available;
-  }
-  
-  .caja-contacto{
-    width: auto;
-  }
- .nav-contact{
-  position:static ;
- }
-  
-  h1{
-      text-align: center;
-  }
-  nav{
-      position: fixed;
-  }
-  p{
-    width: auto;
-  }
-  .main__productos , .main__nuestro-cafe video  {
-      width: auto;
-  }
-  .main__productos--productos div div, .checkbox, .legend {
-      width: 100%;
-  }
-  
-footer{
-  width: 100%;
-}
 }
