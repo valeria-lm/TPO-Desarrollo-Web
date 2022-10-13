@@ -1,19 +1,15 @@
+// se va actualizando el año del copyright del footer con el año actual correspondiente
 const copyright = document.querySelector("#copyright");
 const date = new Date();
 const year = date.getFullYear();
 
-// insertar año en html
 copyright.innerHTML = `© ${year}. Copyright Tienda AVA Café. Todos los derechos reservados`;
-
-/* ------------------------------ */
 
 // cambiar color del nav al hacer scroll
 window.addEventListener("scroll", function () {
   let nav = document.querySelector("nav");
   nav.classList.toggle("nav-scroll", window.scrollY > 0);
 });
-
-/* ------------------------------ */
 
 // validación form: contacto.html
 const nombreApellido = document.getElementById("nombre-y-apellido");

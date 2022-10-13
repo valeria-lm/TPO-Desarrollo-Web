@@ -135,14 +135,21 @@ nav div a:hover::after {
   padding: 5rem 3rem;
 }
 
+.main__productos h1 {
+  font-weight: 900;
+  color: var(--dark-brown-color);
+  text-align: center;
+  text-decoration: underline;
+}
+
 .main__productos--titulo {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.main__productos--titulo h3 {
-  font-size: 1.5rem;
+.main__productos--titulo h2 {
+  font-size: 1.6rem;
   font-weight: 900;
   color: var(--brown-color);
 }
@@ -209,7 +216,7 @@ nav div a:hover::after {
 /*-------------- MAIN: nuestro café --------------*/
 .main__nuestro-cafe {
   height: 25rem;
-  margin: 4rem 3rem;
+  margin: 1rem 3rem 6rem ;
   display: flex;
   gap: 2rem;
   border-radius: 1.5rem;
@@ -272,61 +279,71 @@ nav div a:hover::after {
 }
 
 /* ---------------- NOSOTROS: nosotros.html -------------------*/
-.main__Nosotros {
-  padding: 0 3rem;
+.section__nosotros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "section__nosotros--primero section__nosotros--primero"
+    "section__nosotros--segundo section__nosotros--segundo"
+    "section__nosotros--tercero section__nosotros--tercero"
+    "section__nosotros--cuarto section__nosotros--cuarto";
+  padding-top: 3.5rem;
 }
 
-.Nosotros_nosotros_1 {
+.section__nosotros--primero {
+  grid-area: section__nosotros--primero;
+}
+
+.section__nosotros--segundo {
+  grid-area: section__nosotros--segundo;
+}
+
+.section__nosotros--tercero {
+  grid-area: section__nosotros--tercero;
+}
+
+.section__nosotros--cuarto {
+  grid-area: section__nosotros--cuarto;
+}
+
+.nosotros-container {
   display: flex;
-  width: 100%;
-  height: 70vh;
-  padding: 5rem 3rem;
-  margin-right: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
-.der {
-  background-image: url(./images/Nosotros_Fondo_Der.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-
-.izq {
-  background-image: url(./images/Nosotros_Fondo_Izq.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-
-.Nosotros_nosotros_1 div {
+.nosotros-container--descripcion {
   display: flex;
   align-items: center;
-  width: 35rem;
-  height: auto;
-  margin: 3rem 3rem;
-  padding: 1rem 1rem;
+  width: 40rem;
+  height: 15rem;
+  margin: 3.1rem;
+  padding: 0 5rem;
   background-color: var(--light-brown-color-hover);
-  object-fit: cover;
   border-radius: 1rem;
   box-shadow: 20px 20px 25px var(--brown-color);
 }
 
-.Nosotros_nosotros_1 img {
-  width: 35rem;
-  height: 30rem;
-  border-radius: 1rem;
-  margin: 0 3rem;
+.nosotros-container--descripcion p {
+  font-size: 1.1rem;
+  color: var(--white-color);
+  text-align: justify;
 }
 
-.Nosotros_nosotros_1 iframe {
-  width: 35rem;
-  height: 30rem;
-  border-radius: 1rem;
-  margin: 0 3rem;
+.nosotros-container--imagen {
+  width: 57%;
+  height: 28rem;
+  padding: 2rem;
+  background-color: var(--footer-color);
 }
-
-.Nosotros_nosotros_1 p {
-  color: #ffffff;
-  text-align: center;
-  font-family: "Noto Serif Gujarati", serif;
+.nosotros-container--imagen img,
+iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
 }
 
 /* -------------- FORMULARIO: contacto.html --------------*/
