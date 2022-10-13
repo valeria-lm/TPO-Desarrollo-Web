@@ -30,9 +30,17 @@ nav {
   background-color: var(--brown-color);
 }
 
-nav.abajo {
+/* Estilos de la función de js para que el nav cambie de color al hacer scroll */
+nav.nav-scroll,
+nav.nav-scroll .nav__AVA-logo-dark {
   background-color: var(--dark-brown-color);
   transition: all 1s;
+  display: inline-flex;
+}
+
+.nav__AVA-logo-dark,
+nav.nav-scroll .nav__AVA-logo-light {
+  display: none;
 }
 
 nav img {
@@ -390,10 +398,15 @@ form legend {
 
 form label {
   font-size: 1.1rem;
+  color: var(--dark-brown-color);
 }
 
 .input-padron {
   height: 2rem;
+}
+
+#error {
+  color: red;
 }
 
 .fieldset__container button {
