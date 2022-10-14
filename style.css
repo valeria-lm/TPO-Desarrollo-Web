@@ -20,7 +20,7 @@
 /*-------------- NAV --------------*/
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: fixed;
   z-index: 1;
@@ -48,7 +48,20 @@ nav img {
   margin-left: 1rem;
 }
 
-nav div a {
+.nav__menu--items {
+  display: none;
+  list-style: none;
+}
+
+.nav__menu--items li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  transition-duration: 0.25s;
+}
+
+.nav__menu--items li a {
   position: relative;
   margin-left: 3rem;
   color: var(--white-color);
@@ -56,7 +69,7 @@ nav div a {
   font-weight: 500;
 }
 
-nav div a::after {
+.nav__menu--items li a::after {
   content: "";
   position: absolute;
   width: 0%;
@@ -67,12 +80,80 @@ nav div a::after {
   transition: all 0.3s ease-in-out;
 }
 
-nav div a:hover::after {
+.nav__menu--items li a:hover::after {
   width: 100%;
   left: 0;
 }
 
-/*-------------- MAIN: portada --------------*/
+#nav__menu--toggle {
+  display: none;
+}
+
+#nav__menu--toggle:checked + .nav__menu--btn > span {
+  transform: rotate(45deg);
+}
+
+#nav__menu--toggle:checked + .nav__menu--btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+
+#nav__menu--toggle:checked + .nav__menu--btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#nav__menu--toggle:checked ~ .nav__menu--items {
+  left: 0 !important;
+}
+
+.nav__menu--btn {
+  position: fixed;
+  top: 1.6rem;
+  left: 1rem;
+  width: 1.5rem;
+  height: 2rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.nav__menu--btn > span,
+.nav__menu--btn > span::before,
+.nav__menu--btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--white-color);
+  transition-duration: 0.25s;
+}
+
+.nav__menu--btn > span::before {
+  content: "";
+  top: -8px;
+}
+
+.nav__menu--btn > span::after {
+  content: "";
+  top: 8px;
+}
+
+/* media queries del nav */
+@media (min-width: 720px) {
+  nav {
+    justify-content: space-between;
+  }
+
+  .nav__menu--btn {
+    display: none;
+  }
+
+  .nav__menu--items {
+    display: flex;
+  }
+}
+
+/*-------------- HOME: portada --------------*/
 .main__portada {
   display: flex;
   justify-content: space-between;
@@ -127,7 +208,41 @@ nav div a:hover::after {
   }
 }
 
-/*-------------- MAIN: productos destacados --------------*/
+/* media queries del HOME: portada */
+@media (max-width: 720px) {
+  .main__portada {
+    flex-direction: column;
+  }
+
+  .main__portada--frase {
+    padding-top: 1rem;
+    font-size: 1.4rem;
+  }
+
+  .main__portada--image1 {
+    top: 3rem;
+    left: 1rem;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .main__portada--image2 {
+    top: 7rem;
+    left: 2.5rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .main__portada img:nth-of-type(3) {
+    position: relative;
+    top: -5rem;
+    left: 7rem;
+    width: 12rem;
+    height: 12rem;
+  }
+}
+
+/*-------------- HOME: productos destacados --------------*/
 .main__productos {
   display: flex;
   flex-direction: column;
@@ -170,10 +285,8 @@ nav div a:hover::after {
 
 .main__productos--productos {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 15rem));
   gap: 6rem;
-  grid-template-areas: "producto-destacado1 producto-destacado2 producto-destacado3 producto-destacado4";
   margin-bottom: 1rem;
 }
 
@@ -204,7 +317,7 @@ nav div a:hover::after {
   color: var(--dark-brown-color);
 }
 
-.main__productos--productos div p {
+.main__productos--productos > div > p {
   font-size: 1rem;
   text-align: justify;
 }
@@ -213,10 +326,55 @@ nav div a:hover::after {
   color: var(--yellow-color);
 }
 
-/*-------------- MAIN: nuestro café --------------*/
+/* media queries del HOME: productos destacados */
+@media (max-width: 720px) {
+  .main__productos {
+    padding: 4rem 2rem;
+  }
+
+  .main__productos--productos > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main__productos--titulo h2 {
+    font-size: 1.4rem;
+  }
+
+  .main__productos--titulo button {
+    width: 6rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .main__productos--productos {
+    grid-template-columns: 8rem 8rem;
+    gap: 3.5rem;
+  }
+
+  .main__productos--productos div img {
+    width: 100%;
+    height: 8rem;
+  }
+
+  .productos__descripcion {
+    flex-direction: column;
+  }
+
+  .main__productos--productos div div p {
+    font-size: 1.1rem;
+  }
+
+  .main__productos--productos > div > p {
+    display: none;
+  }
+}
+
+/*-------------- HOME: nuestro café --------------*/
 .main__nuestro-cafe {
   height: 25rem;
-  margin: 1rem 3rem 6rem ;
+  padding: 1rem 3rem 6rem;
   display: flex;
   gap: 2rem;
   border-radius: 1.5rem;
@@ -276,6 +434,34 @@ nav div a:hover::after {
   text-align: center;
   font-weight: 900;
   color: var(--dark-brown-color);
+}
+
+/* media queries del HOME: nuestro café */
+@media (max-width: 720px) {
+  .main__nuestro-cafe {
+    padding: 1rem 2rem 6rem;
+    gap: 1rem;
+  }
+
+  .main__nuestro-cafe video {
+    width: 8rem;
+    height: 21rem;
+  }
+
+  .main__nuestro-cafe--container {
+    width: 10.5rem;
+    height: 21rem;
+
+  }
+
+  .main__nuestro-cafe--titulo {
+    font-size: 1rem;
+  }
+
+  .main__nuestro-cafe--parrafo {
+    font-size: 0.9rem;
+    margin: 1rem;
+  }
 }
 
 /* ---------------- NOSOTROS: nosotros.html -------------------*/
@@ -420,10 +606,6 @@ form label {
 
 .input-padron {
   height: 2rem;
-}
-
-#error {
-  color: red;
 }
 
 .fieldset__container button {

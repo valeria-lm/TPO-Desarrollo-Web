@@ -37,3 +37,5 @@ form.addEventListener("submit", (e) => {
     errorElement.innerText = messages.join(", ");
   }
 });
+
+document.getElementById("error").style.color = "red";
