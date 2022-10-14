@@ -373,7 +373,6 @@ nav img {
 
 /*-------------- HOME: nuestro café --------------*/
 .main__nuestro-cafe {
-  height: 25rem;
   padding: 1rem 3rem 6rem;
   display: flex;
   gap: 2rem;
@@ -390,6 +389,7 @@ nav img {
 }
 
 .main__nuestro-cafe--container {
+  height: 25rem;
   box-shadow: 3px 3px 30px #bebebe, -3px -3px 30px var(--white-color);
   border-radius: 1rem;
 }
@@ -439,19 +439,18 @@ nav img {
 /* media queries del HOME: nuestro café */
 @media (max-width: 720px) {
   .main__nuestro-cafe {
-    padding: 1rem 2rem 6rem;
+    padding: 1rem 2rem;
     gap: 1rem;
   }
 
   .main__nuestro-cafe video {
     width: 8rem;
-    height: 21rem;
+    height: 25.5rem;
   }
 
   .main__nuestro-cafe--container {
     width: 10.5rem;
-    height: 21rem;
-
+    height: 25.5rem;
   }
 
   .main__nuestro-cafe--titulo {
@@ -459,8 +458,25 @@ nav img {
   }
 
   .main__nuestro-cafe--parrafo {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin: 1rem;
+  }
+
+  .main__nuestro-cafe--granos {
+    gap: 2rem;
+    position: relative;
+    top: 2rem;
+    left: -4.5rem;
+  }
+
+  .main__nuestro-cafe--granos div div {
+    height: 4.2rem;
+    width: 4.5rem;
+  }
+
+  .main__nuestro-cafe--granos div img {
+    width: 4rem;
+    height: 4rem;
   }
 }
 
@@ -629,7 +645,6 @@ form label {
 footer {
   display: flex;
   flex-direction: column;
-  /* margin-top: 10rem; */
   font-size: 0.7rem;
   color: var(--white-color);
   background-color: var(--dark-brown-color);
@@ -717,6 +732,32 @@ footer h5,
 footer > p {
   align-self: center;
   margin: 1rem 0;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 400;
+}
+
+/* media queries del footer */
+@media (max-width: 720px) {
+  footer {
+    margin-top: 10rem;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .container__info--titulo {
+    font-size: 1.1rem;
+  }
+
+  .container__info--items a,
+  .container__info--items a span {
+    font-size: 1rem;
+  }
+
+  footer h5,
+  footer > p {
+    font-size: 0.7rem;
+  }
 }
