@@ -349,7 +349,7 @@ nav img {
   }
 
   .main__productos--productos {
-    grid-template-columns: 8rem 8rem;
+    grid-template-columns: 1fr 1fr;
     row-gap: 3rem;
   }
 
