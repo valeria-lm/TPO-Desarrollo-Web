@@ -350,7 +350,7 @@ nav img {
 
   .main__productos--productos {
     grid-template-columns: 8rem 8rem;
-    gap: 3.5rem;
+    row-gap: 3rem;
   }
 
   .main__productos--productos div img {
@@ -440,7 +440,7 @@ nav img {
 @media (max-width: 720px) {
   .main__nuestro-cafe {
     padding: 1rem 2rem;
-    gap: 1rem;
+    justify-content: space-between;
   }
 
   .main__nuestro-cafe video {
@@ -466,7 +466,7 @@ nav img {
     gap: 2rem;
     position: relative;
     top: 2rem;
-    left: -4.5rem;
+    left: -6rem;
   }
 
   .main__nuestro-cafe--granos div div {
