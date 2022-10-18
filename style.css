@@ -491,7 +491,6 @@ nav img {
     "section__nosotros--segundo section__nosotros--segundo"
     "section__nosotros--tercero section__nosotros--tercero"
     "section__nosotros--cuarto section__nosotros--cuarto";
-  padding-top: 3.5rem;
 }
 
 .section__nosotros--primero {
@@ -514,6 +513,7 @@ nav img {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 4rem;
 }
 
 .nosotros-container--descripcion {
@@ -546,6 +546,40 @@ iframe {
   height: 100%;
   object-fit: cover;
   border-radius: 1rem;
+}
+
+/* media queries del NOSOTROS */
+@media (max-width: 720px) {
+  .section__nosotros {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "section__nosotros--primero"
+      "section__nosotros--segundo"
+      "section__nosotros--tercero"
+      "section__nosotros--cuarto";
+  }
+
+  .nosotros-container {
+    flex-direction: column;
+  }
+
+  .nosotros-container--descripcion {
+    width: 100%;
+    height: 12rem;
+    margin: 0;
+    padding: 0 2rem;
+  }
+
+  .nosotros-container--descripcion p {
+    font-size: 1rem;
+  }
+
+  .nosotros-container--imagen {
+    width: 100%;
+    height: 20rem;
+    padding: 0.5rem;
+  }
 }
 
 /* -------------- FORMULARIO: contacto.html --------------*/
@@ -593,7 +627,6 @@ iframe {
 }
 
 .section__contacto-form fieldset {
-  width: 20rem;
   padding: 1rem;
   border-radius: 0.5rem;
 }
@@ -639,6 +672,25 @@ form label {
 .fieldset__container button:hover {
   background-color: var(--light-brown-color-hover);
   transform: translateY(-6px);
+}
+
+/* media queries del NOSOTROS */
+@media (max-width: 720px) {
+  .section__contacto-portada::after {
+    font-size: 1.6rem;
+  }
+
+  .fieldset__container {
+    width: 15rem;
+  }
+
+  form label {
+    font-size: 0.8rem;
+  }
+
+  .fieldset__container button {
+    font-size: 0.7rem;
+  }
 }
 
 /* -------------- FOOTER --------------*/
