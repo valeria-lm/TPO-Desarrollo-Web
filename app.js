@@ -15,6 +15,7 @@ window.addEventListener("scroll", function () {
 const nombreApellido = document.getElementById("nombre-y-apellido");
 const correoElectronico = document.getElementById("correo-electronico");
 const telefono = document.getElementById("telefono");
+const mensaje = document.getElementById("mensaje");
 const form = document.getElementById("form");
 const errorElement = document.getElementById("error");
 
@@ -32,6 +33,10 @@ form.addEventListener("submit", (e) => {
     messages.push("*Es necesario su número de telefono");
   }
 
+  if (mensaje.value === "" || mensaje.value == null) {
+    messages.push("*Es necesario que escriba su mensaje");
+  }
+
   if (messages.length > 0) {
     e.preventDefault();
     errorElement.innerText = messages.join(", ");
@@ -39,3 +44,23 @@ form.addEventListener("submit", (e) => {
 });
 
 document.getElementById("error").style.color = "red";
+
+/* ------- */
+form.addEventListener("submit", handleSubmit);
+
+async function handleSubmit(event) {
+  event.preventDefault();
+  const form = new FormData(this);
+  const response = await fetch(this.action, {
+    method: this.method,
+    body: form,
+    headers: {
+      Accept: "application/json",
+    },
+  });
+
+  if (response.ok) {
+    this.reset();
+    alert("¡Gracias por contactarte, te escribiremos pronto!");
+  }
+}
