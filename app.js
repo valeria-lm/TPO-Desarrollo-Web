@@ -45,7 +45,7 @@ form.addEventListener("submit", (e) => {
 
 document.getElementById("error").style.color = "red";
 
-/* ------- */
+// API de formspree: contacto.html
 form.addEventListener("submit", handleSubmit);
 
 async function handleSubmit(event) {

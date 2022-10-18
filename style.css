@@ -286,7 +286,7 @@ nav img {
 
 .main__productos--productos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 15rem));
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   gap: 6rem;
   margin-bottom: 1rem;
 }
