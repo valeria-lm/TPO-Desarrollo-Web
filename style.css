@@ -681,15 +681,7 @@ form label {
   }
 
   .fieldset__container {
-    width: 15rem;
-  }
-
-  form label {
-    font-size: 0.8rem;
-  }
-
-  .fieldset__container button {
-    font-size: 0.7rem;
+    width: 20rem;
   }
 }
 
