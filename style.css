@@ -323,7 +323,7 @@ nav img {
   text-align: justify;
 }
 
-.star {
+.star span {
   color: var(--yellow-color);
 }
 
@@ -369,6 +369,10 @@ nav img {
 
   .main__productos--productos > div > p {
     display: none;
+  }
+
+  .star span {
+    font-size: 1rem;
   }
 }
 
@@ -441,7 +445,7 @@ nav img {
 @media (max-width: 720px) {
   .main__nuestro-cafe {
     padding: 1rem 2rem;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .main__nuestro-cafe video {
