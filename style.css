@@ -232,7 +232,7 @@ nav img {
 }
 
 /* media queries del HOME: portada */
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
   .main__portada img:nth-of-type(3) {
       width: 20rem;
       height: 20rem;
