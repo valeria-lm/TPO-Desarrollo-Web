@@ -232,6 +232,13 @@ nav img {
 }
 
 /* media queries del HOME: portada */
+@media (max-width: 1024px) {
+  .main__portada img:nth-of-type(3) {
+      width: 20rem;
+      height: 20rem;
+  }
+}
+
 @media (max-width: 720px) {
   .main__portada {
     flex-direction: column;
@@ -263,6 +270,7 @@ nav img {
     height: 12rem;
   }
 }
+
 
 /*-------------- HOME: productos destacados --------------*/
 .main__productos {
@@ -349,6 +357,13 @@ nav img {
 }
 
 /* media queries del HOME: productos destacados */
+@media (max-width: 1024px) {
+    .main__productos--productos {
+    grid-template-columns: 1fr 1fr;
+   
+  }
+}
+
 @media (max-width: 720px) {
   .main__productos {
     padding: 4rem 2rem;
